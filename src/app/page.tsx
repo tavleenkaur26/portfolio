@@ -99,7 +99,7 @@ const stack = [
 
 const experience = [
   {
-    role: "Research Intern",
+    role: "Research intern",
     org: "Indian Institute of Management, Lucknow",
     time: "Jul 2026 — Present · Noida, on-site",
     desc: "Faculty-led research on Mergers & Acquisitions at IIM Lucknow. I worked on collecting & cleaning data from financial databases like Bloomberg, building Python pipelines to automate the process, and running statistical analysis to uncover patterns in acquisition outcomes.",
@@ -108,11 +108,11 @@ const experience = [
     role: "Technical coordinator",
     org: "Protégé, IGDTUW",
     time: "Nov 2025 — Present",
-    desc: "Frontend development for Protégé's 2025 website and for Protex Hackathon's website - built key UI components and pages as part of a team.",
+    desc: "Frontend development for Protégé's 2025 website and for Protex Hackathon — built key UI components and pages as part of a team.",
   },
   {
     role: "Mentee",
-    org: "XSEED Mentorship Cohort",
+    org: "XSEED",
     time: "Jan 2026 — Apr 2026",
     desc: "Recognised as a top mentee for excellence in DSA preparation and consistent performance.",
   },
@@ -120,7 +120,7 @@ const experience = [
     role: "Scholar",
     org: "SheFi, Season 16",
     time: "Mar 2026 — May 2026",
-    desc: "Selected for a global Web3 / DeFi scholarship program - completed coursework on Ethereum, smart contracts, and tokenomics, and collaborated with an international cohort through project-based learning.",
+    desc: "Selected for a global Web3 / DeFi scholarship program — completed coursework on Ethereum, smart contracts, and tokenomics, and collaborated with an international cohort through project-based learning.",
   },
 ];
 
@@ -267,7 +267,7 @@ export default function Home() {
             <Reveal>
               <div className="rounded-2xl border border-amber/25 bg-amber/5 p-8 h-full hover:border-amber/50 transition-colors">
                 <p className="font-display text-2xl leading-relaxed">
-                  I&apos;m a second year CS student who learns best by building: full-stack apps,
+                  I&apos;m a second-year CS student who learns best by building — full-stack apps,
                   mobile tools, applied ML systems, whatever the problem needs. I like going past
                   the surface: understanding <span className="text-amber italic">why</span> a
                   system works, not just shipping the feature.
@@ -332,9 +332,7 @@ export default function Home() {
                 <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-amber mb-3">01 · T1D forecasting copilot</p>
                 <h3 className="font-display text-3xl mb-4">DiaBloom</h3>
                 <p className="text-text-dim leading-relaxed mb-5">
-                  A glucose forecasting copilot for Type 1 diabetes. A LSTM model forecasts hypoglycemic
-                  events 30 minutes ahead, with SHAP explaining every prediction and an LLM layer
-                  reading meals from text or photos.
+                  A glucose forecasting copilot for Type 1 diabetes. A LSTM model forecasts hypoglycemic events 30 minutes ahead, with SHAP explaining every prediction and an LLM layer reading meals from text or photos.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   <div className="border border-amber/30 bg-amber/5 rounded-lg px-3 py-2.5">
@@ -354,7 +352,7 @@ export default function Home() {
                 <a href="https://github.com/tavleenkaur26/diabloom" target="_blank" className="font-mono text-[12px] tracking-[0.1em] uppercase text-amber hover:opacity-70 transition-opacity">Code ↗</a>
               </div>
               <div className="md:col-span-3 rounded-lg overflow-hidden border border-line group-hover:border-amber/40 transition-colors">
-                <Image src="/assets/diabloom-1.png" alt="DiaBloom dashboard" width={1200} height={800} className="w-full h-auto" />
+                <Image src="/assets/diabloom-1.png" alt="DiabLoom dashboard" width={1200} height={800} className="w-full h-auto" />
               </div>
             </div>
           </div>
@@ -369,7 +367,7 @@ export default function Home() {
                 <p className="text-text-dim leading-relaxed mb-5">
                   An intrusion detection system that explains its own verdicts. An XGBoost
                   classifier flags network threats, SHAP grounds every incident in the exact
-                  evidence the model used, and an LLM layer narrates it - restricted to
+                  evidence the model used, and an LLM layer narrates it — restricted to
                   pre-verified facts only, so it can&apos;t invent an IP or a verdict.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
@@ -406,8 +404,8 @@ export default function Home() {
                 <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-teal mb-3">03 · Android file cleaner</p>
                 <h3 className="font-display text-3xl mb-4">TrashData</h3>
                 <p className="text-text-dim leading-relaxed mb-5">
-                  An Android app that scans device storage for junk: old files, large files, and
-                  duplicates via MD5 hashing - and clears it safely with user confirmation. Runs
+                  An Android app that scans device storage for junk — old files, large files, and
+                  duplicates via MD5 hashing — and clears it safely with user confirmation. Runs
                   background scans through WorkManager and uses Groq-based AI tagging for smarter
                   file categorization.
                 </p>
@@ -498,23 +496,32 @@ export default function Home() {
       <SectionWrap id="stack" className="border-t border-line">
         <Reveal>
           <Eyebrow>Stack</Eyebrow>
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-4">
             {stack.map((s, i) => {
               const colors = ["amber", "violet", "teal", "amber", "violet"];
               const c = colors[i % colors.length];
               return (
-                <div key={s.label}>
-                  <p className={`font-mono text-[11px] tracking-[0.2em] uppercase mb-3 ${c === "amber" ? "text-amber" : c === "violet" ? "text-violet" : "text-teal"}`}>{s.label}</p>
+                <div
+                  key={s.label}
+                  className={`rounded-2xl border p-6 transition-all ${i === stack.length - 1 ? "md:col-span-2" : ""} ${
+                    c === "amber"
+                      ? "border-amber/25 bg-amber/5 hover:border-amber/50 hover:shadow-[0_0_30px_rgba(240,168,78,0.1)]"
+                      : c === "violet"
+                      ? "border-violet/25 bg-violet/5 hover:border-violet/50 hover:shadow-[0_0_30px_rgba(167,139,250,0.1)]"
+                      : "border-teal/25 bg-teal/5 hover:border-teal/50 hover:shadow-[0_0_30px_rgba(94,234,212,0.1)]"
+                  }`}
+                >
+                  <p className={`font-mono text-[11px] tracking-[0.2em] uppercase mb-4 ${c === "amber" ? "text-amber" : c === "violet" ? "text-violet" : "text-teal"}`}>{s.label}</p>
                   <div className="flex flex-wrap gap-2">
                     {s.items.split(", ").map((item) => (
                       <span
                         key={item}
                         className={`font-mono text-[12px] rounded-full px-3 py-1.5 border transition-colors ${
                           c === "amber"
-                            ? "text-amber border-amber/30 bg-amber/5 hover:bg-amber/15"
+                            ? "text-amber border-amber/30 bg-bg/40 hover:bg-amber/15"
                             : c === "violet"
-                            ? "text-violet border-violet/30 bg-violet/5 hover:bg-violet/15"
-                            : "text-teal border-teal/30 bg-teal/5 hover:bg-teal/15"
+                            ? "text-violet border-violet/30 bg-bg/40 hover:bg-violet/15"
+                            : "text-teal border-teal/30 bg-bg/40 hover:bg-teal/15"
                         }`}
                       >
                         {item}
@@ -532,8 +539,11 @@ export default function Home() {
         <div className="blob absolute bottom-0 left-1/3 w-72 h-72 rounded-full bg-teal pointer-events-none" />
         <Reveal className="relative">
           <Eyebrow>Get in touch</Eyebrow>
-          <p className="font-display text-3xl md:text-5xl max-w-2xl leading-tight mb-10 gradient-text">
+          <p className="font-display text-3xl md:text-5xl max-w-2xl leading-tight mb-4 gradient-text">
             Always happy to talk about what I&apos;m building, or what you are.
+          </p>
+          <p className="text-text-dim text-sm md:text-base mb-10 max-w-xl">
+            Open to interesting ideas, projects, research, collaborations, or just a good conversation.
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="mailto:tavleen.0809@gmail.com" className="font-mono text-[12px] tracking-[0.1em] uppercase bg-amber text-bg px-5 py-2.5 rounded-full hover:shadow-[0_0_24px_rgba(240,168,78,0.5)] transition-shadow">
