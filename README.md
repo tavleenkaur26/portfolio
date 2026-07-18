@@ -1,10 +1,20 @@
-# Tavleen Kaur — Portfolio
+# Portfolio Website
+My personal portfolio site, built to showcase my projects, experience, and what I'm currently working on.
 
-Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+Live at: https://tavleenkaur.vercel.app
 
-## Development
-```
+## Built with
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+## Running locally
+
+```bash
 npm install
 npm run dev
 ```
 
+Then open [http://localhost:3000](http://localhost:3000).
