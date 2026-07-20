@@ -99,13 +99,13 @@ const stack = [
 
 const experience = [
   {
-    role: "Research intern",
+    role: "Research Intern",
     org: "Indian Institute of Management, Lucknow",
     time: "Jul 2026 — Present · Noida, on-site",
-    desc: "Faculty-led research on Mergers & Acquisitions at IIM Lucknow. I worked on collecting & cleaning data from financial databases like Bloomberg, building Python pipelines to automate the process, and running statistical analysis to uncover patterns in acquisition outcomes.",
+    desc: "Faculty-led research on Mergers & Acquisitions at IIM Lucknow. I'm currently working on collecting & cleaning data from financial databases like Bloomberg, building Python pipelines to automate the process, running statistical analysis to uncover patterns in acquisition outcomes, and reviewing academic research papers.",
   },
   {
-    role: "Technical coordinator",
+    role: "Technical Coordinator",
     org: "Protégé, IGDTUW",
     time: "Nov 2025 — Present",
     desc: "Frontend development for Protégé's 2025 website and for Protex Hackathon — built key UI components and pages as part of a team.",
